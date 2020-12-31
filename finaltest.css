@@ -1,0 +1,307 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+  font-family: "Montserrat", sans-serif;
+}
+body {
+  font-size: 14px;
+  line-height: 22px;
+  color: #555555;
+
+  background-image: url(https://wallpaperstock.net/blue-to-orange-gradient_wallpapers_43822_2560x1440.jpg);
+}
+
+.dark-mode {
+  background: url(https://www.hdwallpapers.in/download/horizon_dark_night_sky-1600x900.jpg);
+  background-repeat: no-repeat;
+  background-size: cover;
+  transition: 1s;
+  color: green;
+  filter: invert(1);
+}
+
+.center {
+  position: absolute;
+  top: 1%;
+  left: 93.5%;
+}
+input[type="checkbox"] {
+  appearance: none;
+
+  top: 0;
+  left: 0;
+  width: 122px;
+  height: 40px;
+  background: linear-gradient(0deg, #333, #000);
+  outline: none;
+  border-radius: 20px;
+
+  box-shadow: 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 15px rgba(0, 0, 0, 0.2);
+}
+input:checked[type="checkbox"] {
+  background: linear-gradient(0deg, #6dd1ff, #20b7ff);
+  box-shadow: 0 0 2px #6dd1ff, 0 0 0 4px #353535, 0 0 0 5px #3e3e3e,
+    inset 0 0 10px rgba(0, 0, 0, 1), 0 5px 20px rgba(0, 0, 0, 0.5),
+    inset 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+input[type="checkbox"]:before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 80px;
+  height: 40px;
+  background: linear-gradient(0deg, #000, #6b6b6b);
+  border-radius: 20px;
+  box-shadow: 0 0 0 1px #232323;
+  transform: scale(0.98, 0.96);
+  transition: 0.5s;
+}
+input:checked[type="checkbox"]:before {
+  left: 43px;
+}
+input[type="checkbox"]:after {
+  content: "";
+  position: absolute;
+  top: calc(42% - 2px);
+  left: 60px;
+  width: 4px;
+  height: 4px;
+  background: linear-gradient(0deg, #6b6b6b, #000);
+  border-radius: 50%;
+  transition: 0.5s;
+}
+input:checked[type="checkbox"]:after {
+  background: #63cdff;
+  left: 105px;
+  box-shadow: 0 0 5px #13b3ff, 0 0 15px #13b3ff;
+}
+a {
+  position: relative;
+  display: inline-block;
+  padding: 12px 36px;
+  margin: 0px;
+  color: #fff;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 18px;
+  letter-spacing: 2px;
+
+  border-radius: 40px;
+  background: linear-gradient(90deg, #03a9f4, #f441a5, #ffeb3b, #03a9f4);
+  background-size: 400%;
+}
+
+a:active {
+  background: cyan;
+}
+a:hover {
+  animation: animate 8s linear infinite;
+}
+@keyframes animate {
+  0% {
+    background-position: 0%;
+  }
+  100% {
+    background-position: 400%;
+  }
+}
+
+#colorInputColor {
+  position: absolute;
+  width: 0px;
+  height: 0px;
+  padding: 20px 20px;
+  top: 50px;
+  border-radius: 50%;
+  border-color: white;
+  border-width: 5px;
+  overflow: hidden;
+
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
+}
+
+.bold {
+  font-weight: 700;
+  font-size: 20px;
+  text-transform: uppercase;
+}
+.semi-bold {
+  font-weight: 500;
+  font-size: 16px;
+}
+.resume {
+  width: 800px;
+  height: auto;
+  display: flex;
+  margin: 50px auto;
+}
+.resume .resume_left {
+  width: 350px;
+  background: #0bb5f4;
+}
+.resume .resume_left .resume_profile {
+  width: 300px;
+  height: 250px;
+  padding-left: 15%;
+  padding-top: 10%;
+}
+.resume .resume_left .resume_profile img {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.resume .resume_left .resume_content {
+  padding: 0 25px;
+}
+.resume .title {
+  margin-bottom: 20px;
+}
+.resume .resume_left .bold {
+  color: #fff;
+}
+.resume .resume_left .regular {
+  color: #b1eaff;
+}
+.resume .resume_item {
+  padding: 20px 0;
+  border-bottom: 1px solid #b1eaff;
+}
+.resume .resume_left .resume_item:last-child,
+.resume .resume_right .resume_item:last-child {
+  border-bottom: 0;
+}
+.resume .resume_left .resume_item ul li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+}
+.resume .resume_left .resume_item ul li:last-child {
+  margin-bottom: 0;
+}
+.resume .resume_left ul li .icon {
+  width: 35px;
+  height: 35px;
+  background: white;
+  color: #0bb5f4;
+  border-radius: 50%;
+  margin-right: 15px;
+  font-size: 16px;
+  position: relative;
+}
+.resume .icon i,
+.resume .resume_right .resume_hobby ul li i {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.resume .resume_left ul li .data {
+  color: white;
+}
+.resume .resume_left .resume_skills ul li {
+  color: white;
+  justify-content: space-between;
+}
+.resume .resume_left .resume_skills ul li .skill_name {
+  width: 25%;
+}
+.resume .resume_left .resume_skills ul li .skill_progress {
+  width: 60%;
+  margin: 0 5px;
+  height: 10px;
+  background: #009fd9;
+}
+.resume .resume_left .resume_skills ul li .skill_per {
+  width: 15%;
+}
+.resume .resume_left .resume_skills ul li .skill_progress .width {
+  position: relative;
+  top: 0;
+  left: 0;
+  height: 100%;
+  background: #fff;
+}
+.resume .resume_right {
+  width: 520px;
+  background: #fff;
+  padding: 25px;
+}
+.resume .resume_right .bold {
+  color: #009fd9;
+}
+.resume .resume_right .resume_work ul,
+.resume .resume_right .resume_education ul {
+  padding-left: 40px;
+  overflow: hidden;
+}
+.resume .resume_right ul li {
+  position: relative;
+}
+.resume .resume_right ul li .date {
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+.resume_right ul li .info {
+  margin-bottom: 20px;
+}
+.resume_right ul li:last-child .info {
+  margin-bottom: 0;
+}
+.resume .resume_right .resume_work ul li:before,
+.resume .resume_right .resume_education ul li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: -25px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: white;
+  border: 2px solid #0bb5f4;
+}
+.resume .resume_right .resume_work ul li:after,
+.resume .resume_right .resume_education ul li:after {
+  content: "";
+  position: absolute;
+  top: 14.5px;
+  left: -21.5px;
+  width: 3px;
+  height: 115px;
+  background: #0bb5f4;
+}
+.resume .resume_right .resume_hobby ul {
+  display: flex;
+  justify-content: space-between;
+}
+.resume .resume_right .resume_hobby ul li {
+  width: 80px;
+  height: 80px;
+  border: 2px solid #0bb5f4;
+  border-radius: 50%;
+  position: relative;
+  color: #0bb5f4;
+}
+.resume .resume_right .resume_hobby ul li i {
+  font-size: 30px;
+}
+.resume .resume_right .resume_hobby ul li:before {
+  content: "";
+  position: absolute;
+  top: 40px;
+  right: -32px;
+  width: 30px;
+  height: 2px;
+  background: #0bb5f4;
+}
+.resume .resume_right .resume_hobby ul li:last-child:before {
+  display: none;
+}
